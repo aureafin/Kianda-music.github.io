@@ -13,10 +13,16 @@
 <header class="site-header">
   <a href="" class="logo"><img src="assets/images/logo.png" alt="Kianda Music">Kianda Music</a>
 </header>
-<main>
-  <h1 style="font-size:1.3rem;">Categorias</h1>
-  <p style="color:var(--text-dim); line-height:1.7;">Lista de géneros musicais disponíveis (será implementada na Fase 3).</p>
-</main>
+
+<div class="page-heading">
+  <h1>Géneros</h1>
+  <p>Explora as músicas por estilo musical.</p>
+</div>
+
+<div class="category-list" id="category-list">
+  <div class="empty-state">A carregar géneros...</div>
+</div>
+
 <footer class="site-footer">
   <a href="termos/">Termos</a>
   <a href="privacidade/">Privacidade</a>
@@ -27,5 +33,16 @@
 <div class="footer-contact">
   Kianda Music · Contacto: <strong>+244 954 972 677</strong>
 </div>
+
+<nav class="bottom-nav">
+  <a href=""><span class="ic">🏠</span>Início</a>
+  <a href="musicas/"><span class="ic">🎵</span>Músicas</a>
+  <a href="artistas/"><span class="ic">🎤</span>Artistas</a>
+  <a href="categorias/" class="active"><span class="ic">🏷️</span>Géneros</a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/categorias.js"></script>
 </body>
 </html>
