@@ -12,7 +12,7 @@
 
   function songUrl(song) {
     const artistSlug = song.artists ? song.artists.slug : "artista";
-    return `/musica/${artistSlug}/${song.slug}/`;
+    return `musica/${artistSlug}/${song.slug}/`;
   }
 
   function renderSongs(songs, append) {
