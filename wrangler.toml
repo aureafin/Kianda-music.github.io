@@ -1,0 +1,17 @@
+name = "musicsite-worker"
+main = "index.js"
+compatibility_date = "2024-11-01"
+
+# Bucket R2 - cria primeiro com: wrangler r2 bucket create musicsite-files
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "musicsite-files"
+
+# Variáveis não-secretas (podem ficar aqui)
+[vars]
+ALLOWED_ORIGINS = "https://SEUDOMINIO.github.io,capacitor://localhost,http://localhost"
+
+# Secrets (NÃO colocar aqui os valores; definir via linha de comando):
+#   wrangler secret put SUPABASE_URL
+#   wrangler secret put SUPABASE_ANON_KEY
+#   wrangler secret put SUPABASE_SERVICE_ROLE_KEY

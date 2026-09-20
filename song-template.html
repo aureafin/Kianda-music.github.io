@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{META_TITLE}}</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+<link rel="canonical" href="{{CANONICAL_URL}}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="music.song">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{META_DESCRIPTION}}">
+<meta property="og:image" content="{{COVER_URL}}">
+<meta property="og:url" content="{{CANONICAL_URL}}">
+<meta property="og:site_name" content="{{SITE_NAME}}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{OG_TITLE}}">
+<meta name="twitter:description" content="{{META_DESCRIPTION}}">
+<meta name="twitter:image" content="{{COVER_URL}}">
+
+<link rel="stylesheet" href="{{ASSETS_PATH}}/assets/css/style.css">
+<link rel="icon" href="{{ASSETS_PATH}}/assets/images/favicon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicRecording",
+  "name": "{{TITLE_JSON}}",
+  "byArtist": {
+    "@type": "MusicGroup",
+    "name": "{{ARTIST_NAME_JSON}}"
+  },
+  "genre": "{{CATEGORY_NAME_JSON}}",
+  "datePublished": "{{PUBLISHED_DATE}}",
+  "image": "{{COVER_URL}}",
+  "url": "{{CANONICAL_URL}}"
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="{{ASSETS_PATH}}/" class="logo">{{SITE_NAME}}</a>
+  <a href="{{ASSETS_PATH}}/pesquisa/" class="search-link" aria-label="Pesquisar">🔍</a>
+</header>
+
+<main class="song-page">
+  <section class="song-hero">
+    <img class="song-cover" src="{{COVER_URL}}" alt="Capa de {{TITLE_HTML}} - {{ARTIST_NAME_HTML}}" loading="eager" width="300" height="300">
+    <h1 class="song-title">{{TITLE_HTML}}</h1>
+    <p class="song-artist"><a href="{{ARTIST_URL}}">{{ARTIST_NAME_HTML}}</a></p>
+    <p class="song-meta">
+      <a class="song-category" href="{{CATEGORY_URL}}">{{CATEGORY_NAME_HTML}}</a>
+      <span class="song-date">{{PUBLISHED_DATE_HUMAN}}</span>
+    </p>
+
+    <audio id="player" preload="none" src="{{AUDIO_URL}}"></audio>
+    <div class="player-controls">
+      <button id="play-btn" class="btn-play" aria-label="Ouvir">▶ Ouvir</button>
+      <a id="download-btn" class="btn-download" href="{{AUDIO_URL}}" download data-song-id="{{SONG_ID}}">⬇ Download</a>
+    </div>
+
+    <div class="song-stats">
+      <span id="views-count">👁 {{VIEWS}}</span>
+      <span id="downloads-count">⬇ {{DOWNLOADS}}</span>
+    </div>
+  </section>
+
+  <section class="song-description">
+    <h2>Sobre a música</h2>
+    <p>{{DESCRIPTION_HTML}}</p>
+  </section>
+
+  <section class="related-songs" id="related-songs" data-artist-id="{{ARTIST_ID}}" data-category-id="{{CATEGORY_ID}}" data-song-id="{{SONG_ID}}">
+    <h2>Músicas relacionadas</h2>
+    <div class="related-grid" id="related-grid">
+      <!-- preenchido via JS a partir do Supabase -->
+    </div>
+  </section>
+
+  <section class="ad-slot ad-slot-bottom" aria-label="publicidade">
+    <!-- espaço reservado para banner Adsterra -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <a href="{{ASSETS_PATH}}/termos/">Termos</a>
+  <a href="{{ASSETS_PATH}}/privacidade/">Privacidade</a>
+  <a href="{{ASSETS_PATH}}/copyright/">Copyright</a>
+  <a href="{{ASSETS_PATH}}/contacto/">Contacto</a>
+</footer>
+
+<script>
+  window.__SONG_ID__ = "{{SONG_ID}}";
+  window.__ARTIST_ID__ = "{{ARTIST_ID}}";
+  window.__CATEGORY_ID__ = "{{CATEGORY_ID}}";
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="{{ASSETS_PATH}}/assets/js/config.js"></script>
+<script src="{{ASSETS_PATH}}/assets/js/song-page.js"></script>
+</body>
+</html>

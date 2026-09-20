@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MeuSite Músicas - Baixar e Ouvir Músicas Grátis</title>
+<meta name="description" content="Descubra, ouça e faça download das músicas mais recentes de vários artistas e géneros.">
+<link rel="canonical" href="https://SEUDOMINIO.github.io/SEUREPO/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MeuSite Músicas">
+<meta property="og:description" content="Descubra, ouça e faça download das músicas mais recentes.">
+<meta property="og:url" content="https://SEUDOMINIO.github.io/SEUREPO/">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a href="/" class="logo">MeuSite Músicas</a>
+  <a href="/pesquisa/" class="search-link" aria-label="Pesquisar">🔍</a>
+</header>
+
+<main>
+  <section class="ad-slot ad-slot-top" aria-label="publicidade"></section>
+
+  <h1 style="font-size:1.2rem;">Últimas músicas</h1>
+  <div id="song-list">
+    <p style="color:#9a9aa5;">A carregar músicas...</p>
+  </div>
+
+  <div id="load-more-wrap" style="text-align:center; margin-top:14px;">
+    <button id="load-more-btn" class="btn-play" style="display:none;">Carregar mais</button>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <a href="/termos/">Termos</a>
+  <a href="/privacidade/">Privacidade</a>
+  <a href="/copyright/">Copyright</a>
+  <a href="/contacto/">Contacto</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="/assets/js/config.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "musicsite-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gerador de páginas estáticas de músicas a partir do Supabase",
+  "scripts": {
+    "generate": "node scripts/generate-pages.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  }
+}
