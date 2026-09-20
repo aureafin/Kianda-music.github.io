@@ -4,19 +4,45 @@
 <meta charset="UTF-8">
 <base href="/Kianda-music.github.io/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pesquisar Músicas | Kianda Music</title>
+<title>Pesquisar | Kianda Music</title>
 <meta name="robots" content="index, follow">
 <link rel="icon" href="assets/images/logo.png">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body data-searchonly="true">
 <header class="site-header">
   <a href="" class="logo"><img src="assets/images/logo.png" alt="Kianda Music">Kianda Music</a>
 </header>
-<main>
-  <h1 style="font-size:1.3rem;">Pesquisar Músicas</h1>
-  <p style="color:var(--text-dim); line-height:1.7;">Pesquisa por título, artista ou género (será implementada na Fase 3).</p>
-</main>
+
+<div class="page-heading">
+  <h1>Pesquisar</h1>
+  <p>Escreve o nome de uma música, artista ou género.</p>
+</div>
+
+<div class="search-bar-wrap">
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Pesquisar músicas ou artistas..." autofocus>
+    <button class="search-icon-btn" id="search-btn" aria-label="Pesquisar">🔍</button>
+  </div>
+</div>
+
+<nav class="chip-row" id="chip-row"></nav>
+
+<div class="section-title">
+  <h2 id="list-title">Escreve para pesquisar</h2>
+</div>
+
+<div id="song-list">
+  <div class="empty-state">
+    <div class="icon">🔍</div>
+    Os resultados vão aparecer aqui.
+  </div>
+</div>
+
+<div id="load-more-wrap" style="display:none;">
+  <button id="load-more-btn" class="btn-play" style="display:none;">Carregar mais</button>
+</div>
+
 <footer class="site-footer">
   <a href="termos/">Termos</a>
   <a href="privacidade/">Privacidade</a>
@@ -27,5 +53,16 @@
 <div class="footer-contact">
   Kianda Music · Contacto: <strong>+244 954 972 677</strong>
 </div>
+
+<nav class="bottom-nav">
+  <a href=""><span class="ic">🏠</span>Início</a>
+  <a href="musicas/"><span class="ic">🎵</span>Músicas</a>
+  <a href="artistas/"><span class="ic">🎤</span>Artistas</a>
+  <a href="categorias/"><span class="ic">🏷️</span>Géneros</a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/browse.js"></script>
 </body>
 </html>
