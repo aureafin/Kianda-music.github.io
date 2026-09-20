@@ -13,10 +13,23 @@
 <header class="site-header">
   <a href="" class="logo"><img src="assets/images/logo.png" alt="Kianda Music">Kianda Music</a>
 </header>
-<main>
-  <h1 style="font-size:1.3rem;">Artistas</h1>
-  <p style="color:var(--text-dim); line-height:1.7;">Lista de todos os artistas disponíveis na plataforma (será implementada na Fase 3).</p>
-</main>
+
+<div class="page-heading">
+  <h1>Artistas</h1>
+  <p>Descobre todos os artistas disponíveis na plataforma.</p>
+</div>
+
+<div class="search-bar-wrap">
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Pesquisar artista...">
+    <button class="search-icon-btn" aria-label="Pesquisar">🔍</button>
+  </div>
+</div>
+
+<div class="artist-grid" id="artist-grid">
+  <div class="empty-state" style="grid-column:1/-1;">A carregar artistas...</div>
+</div>
+
 <footer class="site-footer">
   <a href="termos/">Termos</a>
   <a href="privacidade/">Privacidade</a>
@@ -27,5 +40,16 @@
 <div class="footer-contact">
   Kianda Music · Contacto: <strong>+244 954 972 677</strong>
 </div>
+
+<nav class="bottom-nav">
+  <a href=""><span class="ic">🏠</span>Início</a>
+  <a href="musicas/"><span class="ic">🎵</span>Músicas</a>
+  <a href="artistas/" class="active"><span class="ic">🎤</span>Artistas</a>
+  <a href="categorias/"><span class="ic">🏷️</span>Géneros</a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/artistas.js"></script>
 </body>
 </html>
