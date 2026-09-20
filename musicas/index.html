@@ -13,10 +13,40 @@
 <header class="site-header">
   <a href="" class="logo"><img src="assets/images/logo.png" alt="Kianda Music">Kianda Music</a>
 </header>
-<main>
-  <h1 style="font-size:1.3rem;">Todas as Músicas</h1>
-  <p style="color:var(--text-dim); line-height:1.7;">Esta página listará todas as músicas publicadas, com paginação e filtros (será implementada na Fase 3).</p>
-</main>
+
+<div class="page-heading">
+  <h1>Todas as Músicas</h1>
+  <p>Explora, pesquisa e filtra por género.</p>
+</div>
+
+<div class="search-bar-wrap">
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Pesquisar músicas ou artistas...">
+    <button class="search-icon-btn" id="search-btn" aria-label="Pesquisar">🔍</button>
+  </div>
+</div>
+
+<nav class="chip-row" id="chip-row">
+  <span class="chip active" data-cat="">Tudo</span>
+</nav>
+
+<div class="section-title">
+  <h2 id="list-title">Últimas músicas</h2>
+</div>
+
+<div id="song-list">
+  <div class="skeleton-grid">
+    <div class="skeleton-card"><div class="cover-wrap"></div><div class="info"><div class="line"></div><div class="line short"></div></div></div>
+    <div class="skeleton-card"><div class="cover-wrap"></div><div class="info"><div class="line"></div><div class="line short"></div></div></div>
+    <div class="skeleton-card"><div class="cover-wrap"></div><div class="info"><div class="line"></div><div class="line short"></div></div></div>
+    <div class="skeleton-card"><div class="cover-wrap"></div><div class="info"><div class="line"></div><div class="line short"></div></div></div>
+  </div>
+</div>
+
+<div id="load-more-wrap" style="text-align:center; margin:4px 0 20px;">
+  <button id="load-more-btn" class="btn-play" style="display:none;">Carregar mais</button>
+</div>
+
 <footer class="site-footer">
   <a href="termos/">Termos</a>
   <a href="privacidade/">Privacidade</a>
@@ -27,5 +57,16 @@
 <div class="footer-contact">
   Kianda Music · Contacto: <strong>+244 954 972 677</strong>
 </div>
+
+<nav class="bottom-nav">
+  <a href=""><span class="ic">🏠</span>Início</a>
+  <a href="musicas/" class="active"><span class="ic">🎵</span>Músicas</a>
+  <a href="artistas/"><span class="ic">🎤</span>Artistas</a>
+  <a href="categorias/"><span class="ic">🏷️</span>Géneros</a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/browse.js"></script>
 </body>
 </html>
