@@ -1,6 +1,6 @@
 // song-page.js — interatividade da página de música
 (function () {
-  const { SUPABASE_URL, SUPABASE_ANON_KEY, WORKER_URL } = window.APP_CONFIG;
+  const { SUPABASE_URL, SUPABASE_ANON_KEY } = window.APP_CONFIG;
   const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
   const songId = window.__SONG_ID__;
@@ -29,27 +29,6 @@
 
   function markCounted(type) {
     localStorage.setItem(`ms_${type}_${songId}`, String(Date.now()));
-  }
-
-  async function registerEvent(type) {
-    if (alreadyCounted(type)) return;
-    markCounted(type);
-    try {
-      const res = await fetch(`${WORKER_URL}/api/event`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          song_id: songId,
-          event_type: type,
-          session_hash: getSessionHash(),
-        }),
-      });
-      const data = await res.json();
-      if (type === "view" && data.views != null) {
-        document.getElementById("views-count").textContent = `👁 ${data.views}`;
-      }
-      if (type === "download" && data.downloads != null) {
-        document.getElementById("downloads-count").textContent = `⬇ ${data.downloads}`;
       }
     } catch (e) {
       console.warn("Não foi possível registar evento:", e);
@@ -79,19 +58,6 @@
   const downloadBtn = document.getElementById("download-btn");
   downloadBtn.addEventListener("click", () => registerEvent("download"));
 
-  // Músicas relacionadas (mesmo artista ou mesma categoria)
-  async function loadRelated() {
-    const grid = document.getElementById("related-grid");
-    let query = supabase
-      .from("songs")
-      .select("id, title, slug, cover_url, artists(slug, name)")
-      .eq("published", true)
-      .neq("id", songId)
-      .limit(6);
-
-    if (artistId) {
-      query = query.eq("artist_id", artistId);
-    } else if (categoryId) {
       query = query.eq("category_id", categoryId);
     }
 
@@ -118,3 +84,4 @@
 
   loadRelated();
 })();
+      
