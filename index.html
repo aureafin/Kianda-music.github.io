@@ -14,30 +14,46 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="site-header">
-  <a href="" class="logo">MeuSite Músicas</a>
-  <a href="pesquisa/" class="search-link" aria-label="Pesquisar">🔍</a>
+
+<header class="hero-header">
+  <div class="brand">Meu<span>Site</span> Músicas</div>
+  <div class="tagline">Ouve e descarrega as músicas mais recentes, de graça.</div>
 </header>
 
-<main>
-  <section class="ad-slot ad-slot-top" aria-label="publicidade"></section>
+<nav class="chip-row" id="chip-row">
+  <span class="chip active" data-cat="">Tudo</span>
+</nav>
 
-  <h1 style="font-size:1.2rem;">Últimas músicas</h1>
-  <div id="song-list">
-    <p style="color:#9a9aa5;">A carregar músicas...</p>
+<div class="section-title">
+  <h2>Últimas músicas</h2>
+</div>
+
+<div id="song-list">
+  <div class="skeleton-grid">
+    <div class="skeleton-card"><div class="cover-wrap"></div><div class="info"><div class="line"></div><div class="line short"></div></div></div>
+    <div class="skeleton-card"><div class="cover-wrap"></div><div class="info"><div class="line"></div><div class="line short"></div></div></div>
+    <div class="skeleton-card"><div class="cover-wrap"></div><div class="info"><div class="line"></div><div class="line short"></div></div></div>
+    <div class="skeleton-card"><div class="cover-wrap"></div><div class="info"><div class="line"></div><div class="line short"></div></div></div>
   </div>
+</div>
 
-  <div id="load-more-wrap" style="text-align:center; margin-top:14px;">
-    <button id="load-more-btn" class="btn-play" style="display:none;">Carregar mais</button>
-  </div>
-</main>
+<div id="load-more-wrap" style="text-align:center; margin:4px 0 20px;">
+  <button id="load-more-btn" class="btn-play" style="display:none;">Carregar mais</button>
+</div>
 
-<footer class="site-footer">
+<footer class="site-footer" style="margin-bottom:20px;">
   <a href="termos/">Termos</a>
   <a href="privacidade/">Privacidade</a>
   <a href="copyright/">Copyright</a>
   <a href="contacto/">Contacto</a>
 </footer>
+
+<nav class="bottom-nav">
+  <a href="" class="active"><span class="ic">🏠</span>Início</a>
+  <a href="musicas/"><span class="ic">🎵</span>Músicas</a>
+  <a href="artistas/"><span class="ic">🎤</span>Artistas</a>
+  <a href="pesquisa/"><span class="ic">🔍</span>Pesquisar</a>
+</nav>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="assets/js/config.js"></script>
