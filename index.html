@@ -25,12 +25,19 @@
   </div>
 </header>
 
+<div class="search-bar-wrap">
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Pesquisar músicas ou artistas...">
+    <button class="search-icon-btn" id="search-btn" aria-label="Pesquisar">🔍</button>
+  </div>
+</div>
+
 <nav class="chip-row" id="chip-row">
   <span class="chip active" data-cat="">Tudo</span>
 </nav>
 
 <div class="section-title">
-  <h2>Últimas músicas</h2>
+  <h2 id="list-title">Últimas músicas</h2>
 </div>
 
 <div id="song-list">
@@ -61,11 +68,11 @@
   <a href="" class="active"><span class="ic">🏠</span>Início</a>
   <a href="musicas/"><span class="ic">🎵</span>Músicas</a>
   <a href="artistas/"><span class="ic">🎤</span>Artistas</a>
-  <a href="pesquisa/"><span class="ic">🔍</span>Pesquisar</a>
+  <a href="categorias/"><span class="ic">🏷️</span>Géneros</a>
 </nav>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="assets/js/config.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/browse.js"></script>
 </body>
 </html>
