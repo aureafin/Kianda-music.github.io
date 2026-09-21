@@ -322,9 +322,42 @@ nav.bottom-nav a.active{color:var(--accent-2);font-weight:700;}
 }
 .category-row .arrow{ color:var(--text-dim); }
 
+.breadcrumbs{
+  padding:10px 18px;font-size:0.76rem;color:var(--text-dim);
+  overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;
+}
+.breadcrumbs a{color:var(--text-dim);}
+.breadcrumbs a:hover{color:var(--accent);}
+.breadcrumbs span{color:var(--text);font-weight:600;}
+
 .page-heading{ padding:18px 18px 4px; }
 .page-heading h1{ font-size:1.2rem; margin:0 0 4px; }
 .page-heading p{ color:var(--text-dim); font-size:0.85rem; margin:0; }
+/* ---- Google Translate Widget ---- */
+.translate-bar{
+  display:flex;justify-content:flex-end;
+  padding:6px 18px 0;
+}
+#google_translate_element{ font-size:0.78rem; }
+.goog-te-banner-frame.skiptranslate{ display:none !important; }
+body{ top:0 !important; }
+.goog-te-gadget{
+  font-family:inherit !important;
+  font-size:0 !important;
+  color:var(--text-dim) !important;
+}
+.goog-te-gadget .goog-te-combo{
+  font-size:0.78rem !important;
+  font-family:inherit !important;
+  color:var(--text) !important;
+  background:var(--bg-elevated) !important;
+  border:1px solid var(--border) !important;
+  border-radius:20px !important;
+  padding:5px 10px !important;
+  cursor:pointer;
+}
+.goog-logo-link, .goog-te-gadget img{ display:none !important; }
+
 .team-card{
   display:flex;gap:14px;align-items:center;
   background:var(--bg-elevated);border:1px solid var(--border);
