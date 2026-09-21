@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{META_TITLE}}</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+<link rel="canonical" href="{{CANONICAL_URL}}">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{META_DESCRIPTION}}">
+<meta property="og:url" content="{{CANONICAL_URL}}">
+<meta property="og:site_name" content="{{SITE_NAME}}">
+
+<link rel="stylesheet" href="{{ASSETS_PATH}}/assets/css/style.css">
+<link rel="icon" href="{{ASSETS_PATH}}/assets/images/logo.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "{{PAGE_TITLE_JSON}}",
+  "url": "{{CANONICAL_URL}}"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Início","item":"{{SITE_URL}}/"},
+    {"@type":"ListItem","position":2,"name":"{{PAGE_TITLE_JSON}}","item":"{{CANONICAL_URL}}"}
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a href="{{ASSETS_PATH}}/" class="logo"><img src="{{ASSETS_PATH}}/assets/images/logo.png" alt="{{SITE_NAME}}">{{SITE_NAME}}</a>
+</header>
+<div class="translate-bar"><div id="google_translate_element"></div></div>
+
+
+<nav class="breadcrumbs" aria-label="breadcrumb">
+  <a href="{{ASSETS_PATH}}/">Início</a> ›
+  <span>{{PAGE_TITLE_HTML}}</span>
+</nav>
+
+<div class="page-heading">
+  <h1>{{PAGE_TITLE_HTML}}</h1>
+  <p>{{PAGE_INTRO_HTML}}</p>
+</div>
+
+<div class="song-grid">
+{{SONGS_LIST_HTML}}
+</div>
+
+<footer class="site-footer">
+  <a href="{{ASSETS_PATH}}/termos/">Termos</a>
+  <a href="{{ASSETS_PATH}}/privacidade/">Privacidade</a>
+  <a href="{{ASSETS_PATH}}/copyright/">Copyright</a>
+  <a href="{{ASSETS_PATH}}/contacto/">Contacto</a>
+  <a href="{{ASSETS_PATH}}/equipa/">Equipa</a>
+</footer>
+<div class="footer-contact">{{SITE_NAME}} · Contacto: <strong>+244 954 972 677</strong></div>
+
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: "pt", includedLanguages: "pt,en,fr", autoDisplay: false },
+      "google_translate_element"
+    );
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+</body>
+</html>
