@@ -1,5 +1,11 @@
 name: Gerar Páginas de Músicas
 
+# Disparado de 3 formas:
+# 1) repository_dispatch -> chamado pelo Supabase Database Webhook
+#    (ou pelo Worker) sempre que uma música é criada/editada/apagada.
+# 2) workflow_dispatch -> botão manual "Run workflow" no GitHub.
+# 3) schedule -> rede de segurança, corre 1x por dia mesmo que
+#    algum webhook falhe.
 on:
   repository_dispatch:
     types: [songs-updated]
@@ -37,7 +43,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add musica/ sitemap.xml
+          git add musica/ artista/ genero/ novidades/ mais-baixadas/ mais-ouvidas/ sitemap.xml sitemap-musicas.xml sitemap-artistas.xml sitemap-generos.xml sitemap-paginas.xml
           git diff --cached --quiet && echo "Nada para commitar" && exit 0
           git commit -m "chore: atualizar páginas de músicas automaticamente"
           git push
