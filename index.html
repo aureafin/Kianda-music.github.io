@@ -7,6 +7,9 @@
 <title>Kianda Music - Baixar e Ouvir Músicas Grátis</title>
 <meta name="description" content="Descubra, ouça e faça download das músicas mais recentes de vários artistas e géneros.">
 <link rel="canonical" href="https://aureafin.github.io/Kianda-music.github.io/">
+<meta name="robots" content="index, follow">
+<link rel="alternate" hreflang="pt" href="https://aureafin.github.io/Kianda-music.github.io/">
+<link rel="alternate" hreflang="x-default" href="https://aureafin.github.io/Kianda-music.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kianda Music">
 <meta property="og:description" content="Descubra, ouça e faça download das músicas mais recentes.">
@@ -14,6 +17,19 @@
 <meta property="og:image" content="assets/images/logo.png">
 <link rel="icon" href="assets/images/logo.png">
 <link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Kianda Music",
+  "url": "https://aureafin.github.io/Kianda-music.github.io/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://aureafin.github.io/Kianda-music.github.io/pesquisa/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -24,6 +40,8 @@
     <div class="tagline">Ouve e descarrega as músicas mais recentes, de graça.</div>
   </div>
 </header>
+<div class="translate-bar"><div id="google_translate_element"></div></div>
+
 
 <div class="search-bar-wrap">
   <div class="search-bar">
@@ -31,6 +49,12 @@
     <button class="search-icon-btn" id="search-btn" aria-label="Pesquisar">🔍</button>
   </div>
 </div>
+
+<nav class="chip-row" style="padding-top:0;">
+  <a href="novidades/" class="chip">🆕 Novidades</a>
+  <a href="mais-baixadas/" class="chip">⬇ Mais Baixadas</a>
+  <a href="mais-ouvidas/" class="chip">👁 Mais Ouvidas</a>
+</nav>
 
 <nav class="chip-row" id="chip-row">
   <span class="chip active" data-cat="">Tudo</span>
@@ -74,5 +98,15 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="assets/js/config.js"></script>
 <script src="assets/js/browse.js"></script>
+
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: "pt", includedLanguages: "pt,en,fr", autoDisplay: false },
+      "google_translate_element"
+    );
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>

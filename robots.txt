@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://SEUDOMINIO.github.io/SEUREPO/sitemap.xml
+Sitemap: https://aureafin.github.io/Kianda-music.github.io/sitemap.xml
