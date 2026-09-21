@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Categorias | Kianda Music</title>
 <meta name="robots" content="index, follow">
+<meta name="description" content="Explora os géneros musicais disponíveis no Kianda Music e descobre novas músicas por estilo.">
+<link rel="canonical" href="https://aureafin.github.io/Kianda-music.github.io/categorias/">
+<link rel="alternate" hreflang="pt" href="https://aureafin.github.io/Kianda-music.github.io/categorias/">
+<link rel="alternate" hreflang="x-default" href="https://aureafin.github.io/Kianda-music.github.io/categorias/">
 <link rel="icon" href="assets/images/logo.png">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -13,6 +17,8 @@
 <header class="site-header">
   <a href="" class="logo"><img src="assets/images/logo.png" alt="Kianda Music">Kianda Music</a>
 </header>
+<div class="translate-bar"><div id="google_translate_element"></div></div>
+
 
 <div class="page-heading">
   <h1>Géneros</h1>
@@ -44,5 +50,15 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="assets/js/config.js"></script>
 <script src="assets/js/categorias.js"></script>
+
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: "pt", includedLanguages: "pt,en,fr", autoDisplay: false },
+      "google_translate_element"
+    );
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>
