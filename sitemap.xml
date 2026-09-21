@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://aureafin.github.io/Kianda-music.github.io/</loc>
-  </url>
-  <url>
-    <loc>https://aureafin.github.io/Kianda-music.github.io/musicas/</loc>
-  </url>
-  <url>
-    <loc>https://aureafin.github.io/Kianda-music.github.io/artistas/</loc>
-  </url>
-  <url>
-    <loc>https://aureafin.github.io/Kianda-music.github.io/categorias/</loc>
-  </url>
-  <url>
-    <loc>https://aureafin.github.io/Kianda-music.github.io/musica/justin-bieber/baby/</loc>
-  </url>
-  <url>
-    <loc>https://aureafin.github.io/Kianda-music.github.io/musica/shakira/dai-dai/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://aureafin.github.io/Kianda-music.github.io/sitemap-paginas.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://aureafin.github.io/Kianda-music.github.io/sitemap-musicas.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://aureafin.github.io/Kianda-music.github.io/sitemap-artistas.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://aureafin.github.io/Kianda-music.github.io/sitemap-generos.xml</loc>
+  </sitemap>
+</sitemapindex>
