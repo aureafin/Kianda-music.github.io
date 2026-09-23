@@ -150,8 +150,8 @@
         return `
           <a class="related-card" href="${url}">
             <img src="${s.cover_url || ""}" alt="${s.title}" loading="lazy" width="120" height="120">
-            <span class="related-title">${s.title}</span>
-            <span class="related-artist">${artistName}</span>
+            <span class="related-title notranslate" translate="no">${s.title}</span>
+            <span class="related-artist notranslate" translate="no">${artistName}</span>
           </a>`;
       })
       .join("");

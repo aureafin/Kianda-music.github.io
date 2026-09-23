@@ -26,7 +26,7 @@
         (a) => `
         <a class="artist-card" href="musicas/?artist=${a.id}">
           <div class="avatar">${initials(a.name)}</div>
-          <div class="name">${a.name}</div>
+          <div class="name notranslate" translate="no">${a.name}</div>
           <div class="count">${a.songCount} música${a.songCount === 1 ? "" : "s"}</div>
         </a>`
       )

@@ -41,8 +41,8 @@
             <span class="play-badge">▶</span>
           </div>
           <div class="info">
-            <div class="t">${s.title}</div>
-            <div class="a">${s.artists ? s.artists.name : ""}</div>
+            <div class="t notranslate" translate="no">${s.title}</div>
+            <div class="a notranslate" translate="no">${s.artists ? s.artists.name : ""}</div>
           </div>
         </a>`
       )
@@ -168,7 +168,7 @@
     const { data } = await supabase.from("categories").select("id, name, slug").order("name").limit(12);
     if (!data || !data.length) return;
     const extra = data
-      .map((c) => `<span class="chip" data-cat="${c.id}">${c.name}</span>`)
+      .map((c) => `<span class="chip notranslate" translate="no" data-cat="${c.id}">${c.name}</span>`)
       .join("");
     chipRow.insertAdjacentHTML("beforeend", extra);
 
