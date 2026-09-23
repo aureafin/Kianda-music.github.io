@@ -59,26 +59,24 @@
 </head>
 <body>
 <header class="site-header">
-  <a href="{{ASSETS_PATH}}/" class="logo"><img src="{{ASSETS_PATH}}/assets/images/logo.png" alt="Kianda Music">Kianda Music</a>
+  <a href="{{ASSETS_PATH}}/" class="logo notranslate" translate="no"><img src="{{ASSETS_PATH}}/assets/images/logo.png" alt="Kianda Music">Kianda Music</a>
   <a href="{{ASSETS_PATH}}/musicas/" style="font-size:0.8rem;color:var(--accent);font-weight:600;">Ver mais</a>
 </header>
-<div class="translate-bar"><div id="google_translate_element"></div></div>
-
 
 <nav class="breadcrumbs" aria-label="breadcrumb">
   <a href="{{ASSETS_PATH}}/">Início</a> ›
-  <a href="{{CATEGORY_URL}}">{{CATEGORY_NAME_HTML}}</a> ›
-  <a href="{{ARTIST_URL}}">{{ARTIST_NAME_HTML}}</a> ›
-  <span>{{TITLE_HTML}}</span>
+  <a href="{{CATEGORY_URL}}" class="notranslate" translate="no">{{CATEGORY_NAME_HTML}}</a> ›
+  <a href="{{ARTIST_URL}}" class="notranslate" translate="no">{{ARTIST_NAME_HTML}}</a> ›
+  <span class="notranslate" translate="no">{{TITLE_HTML}}</span>
 </nav>
 
 <main class="song-page">
   <section class="song-hero">
     <img class="song-cover" src="{{COVER_URL}}" alt="Capa de {{TITLE_HTML}} - {{ARTIST_NAME_HTML}}" loading="eager" width="300" height="300">
-    <h1 class="song-title">{{TITLE_HTML}}</h1>
-    <p class="song-artist"><a href="{{ARTIST_URL}}">{{ARTIST_NAME_HTML}}</a></p>
+    <h1 class="song-title notranslate" translate="no">{{TITLE_HTML}}</h1>
+    <p class="song-artist"><a href="{{ARTIST_URL}}" class="notranslate" translate="no">{{ARTIST_NAME_HTML}}</a></p>
     <p class="song-meta">
-      <a class="song-category" href="{{CATEGORY_URL}}">{{CATEGORY_NAME_HTML}}</a>
+      <a class="song-category notranslate" translate="no" href="{{CATEGORY_URL}}">{{CATEGORY_NAME_HTML}}</a>
       <span class="song-date">{{PUBLISHED_DATE_HUMAN}}</span>
     </p>
 
@@ -131,14 +129,5 @@
 <script src="{{ASSETS_PATH}}/assets/js/config.js"></script>
 <script src="{{ASSETS_PATH}}/assets/js/song-page.js"></script>
 
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-      { pageLanguage: "pt", includedLanguages: "pt,en,fr", autoDisplay: false },
-      "google_translate_element"
-    );
-  }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>

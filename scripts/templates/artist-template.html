@@ -45,26 +45,24 @@
 </head>
 <body>
 <header class="site-header">
-  <a href="{{ASSETS_PATH}}/" class="logo"><img src="{{ASSETS_PATH}}/assets/images/logo.png" alt="{{SITE_NAME}}">{{SITE_NAME}}</a>
+  <a href="{{ASSETS_PATH}}/" class="logo notranslate" translate="no"><img src="{{ASSETS_PATH}}/assets/images/logo.png" alt="{{SITE_NAME}}">{{SITE_NAME}}</a>
 </header>
-<div class="translate-bar"><div id="google_translate_element"></div></div>
-
 
 <nav class="breadcrumbs" aria-label="breadcrumb">
   <a href="{{ASSETS_PATH}}/">Início</a> ›
   <a href="{{ASSETS_PATH}}/artistas/">Artistas</a> ›
-  <span>{{ARTIST_NAME_HTML}}</span>
+  <span class="notranslate" translate="no">{{ARTIST_NAME_HTML}}</span>
 </nav>
 
 <div class="page-heading">
-  <h1>{{ARTIST_NAME_HTML}}</h1>
+  <h1 class="notranslate" translate="no">{{ARTIST_NAME_HTML}}</h1>
   <p>{{SONGS_COUNT}} música(s) disponível(is) no catálogo.</p>
 </div>
 
 {{BIO_BLOCK}}
 
 <div class="section-title">
-  <h2>Músicas de {{ARTIST_NAME_HTML}}</h2>
+  <h2>Músicas de <span class="notranslate" translate="no">{{ARTIST_NAME_HTML}}</span></h2>
   <a href="{{BROWSE_ALL_URL}}">Ver todas ›</a>
 </div>
 
@@ -81,14 +79,5 @@
 </footer>
 <div class="footer-contact">{{SITE_NAME}} · Contacto: <strong>+244 954 972 677</strong></div>
 
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-      { pageLanguage: "pt", includedLanguages: "pt,en,fr", autoDisplay: false },
-      "google_translate_element"
-    );
-  }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>
